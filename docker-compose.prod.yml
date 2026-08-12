@@ -40,6 +40,8 @@ services:
     networks:
       - dspacenet
     working_dir: /var/solr/data
+    environment:
+      SOLR_OPTS: "${SOLR_OPTS:-} -Dsolr.security.allow.urls.enabled=false"
     volumes:
       - solr_data:/var/solr/data
     user: root
@@ -63,7 +65,7 @@ services:
         precreate-core audit /opt/solr/server/solr/configsets/audit
         cp -r /opt/solr/server/solr/configsets/audit/* audit
         chown -R solr:solr /var/solr
-        runuser -u solr -- solr-foreground
+        runuser -u solr -- solr-foreground --user-managed
     healthcheck:
       test: ["CMD-SHELL", "bash -c '</dev/tcp/localhost/8983'"]
       interval: 10s

@@ -1,5 +1,6 @@
 DSpace
 dspace-angular
+.DS_Store
 local.cfg
 .env
 .lock_migrated
@@ -7,4 +8,5 @@ local.cfg
 .lock_in_progress
 .docker-build
 migration
+tmp/
 *.sql
