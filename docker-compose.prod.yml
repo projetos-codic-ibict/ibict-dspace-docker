@@ -40,8 +40,6 @@ services:
     networks:
       - dspacenet
     working_dir: /var/solr/data
-    environment:
-      SOLR_OPTS: "${SOLR_OPTS:-} -Dsolr.security.allow.urls.enabled=false"
     volumes:
       - solr_data:/var/solr/data
     user: root
