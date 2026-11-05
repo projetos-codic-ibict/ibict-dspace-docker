@@ -49,8 +49,8 @@ Navegue hasta el directorio `/opt`, clone el repositorio y ajuste los permisos p
 
 ```bash
 cd /opt
-sudo git clone https://github.com/LA-Referencia-Lyrasis-Project/lareferencia-dspace-docker-deploy.git
-sudo chown -R dspace:dspace /opt/lareferencia-dspace-docker-deploy
+sudo git clone https://github.com/projetos-codic-ibict/ibict-dspace-docker.git
+sudo chown -R dspace:dspace /opt/ibict-dspace-docker
 
 ```
 
@@ -60,7 +60,7 @@ sudo chown -R dspace:dspace /opt/lareferencia-dspace-docker-deploy
 sudo su - dspace
 
 # y acceda
-cd /opt/lareferencia-dspace-docker-deploy
+cd /opt/ibict-dspace-docker
 
 ```
 
