@@ -43,12 +43,11 @@ newgrp docker
 
 ## 2. Clone e Configuração Inicial
 
-### Download do Projeto
+### 2.1 Download do Projeto
 
 Navegue até o diretório `/opt`, clone o repositório e ajuste as permissões para o usuário criado:
 
 ```bash
-cd /opt
 git clone https://github.com/projetos-codic-ibict/ibict-dspace-docker.git
 sudo chown -R dspace:dspace /opt/ibict-dspace-docker
 
@@ -64,7 +63,7 @@ cd /opt/ibict-dspace-docker
 
 ```
 
-### Arquivos de Configuração Ambiente
+### 2.2 Arquivos de Configuração Ambiente
 
 Crie os arquivos locais com base nos templates do repositório:
 
@@ -78,7 +77,7 @@ cp local.cfg.example local.cfg
 2. **⚠️ Atenção Crítica:** Altere a variável `POSTGRES_PASSWORD` no `.env` para uma senha forte antes de iniciar o ambiente.
 3. **Editar o arquivo `local.cfg`:** Adicione as propriedades da aplicação DSpace (metadados, SMTP/E-mail, autenticação externa, etc.).
 
-### Mirror do Maven
+*Mirror do Maven*
 
 Por padrão, o instalador mantém a configuração Maven original do DSpace. Para usar um mirror durante a construção da imagem do backend, defina `MAVEN_MIRROR_URL` no `.env`; então o instalador cria um `settings.xml` no estágio Maven do Dockerfile. Por exemplo, para usar o mirror do Google e evitar acessos ao endpoint que possa estar atrás de Cloudflare:
 
