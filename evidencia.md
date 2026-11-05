@@ -1,4 +1,4 @@
-Após subir os containers do RDAPP pela primeira vez execute os seguintes comandos:
+Após subir os containers do Evidencia pela primeira vez execute os seguintes comandos:
 
 ```bash
 docker exec -it dspace /dspace/bin/dspace registry-loader -m /dspace/config/registries/local-types.xml
